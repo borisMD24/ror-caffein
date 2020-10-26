@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Gossip</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <div class="header">
+    <span class="brand">
+      The Gossip Project
+    </span>
+  </div>
+  <div class="nav">
+    <div class="content">
+    <a href="<%= home_path %>">
+      <div class="item">
+        Accueil
+      </div>
+    </a>
+    <a href="<%= contact_path %>">
+      <div class="item">
+        contact
+      </div>
+    </a>
+    <a href="<%= team_path %>">
+      <div class="item">
+        Notre equipe
+      </div>
+    </a>
+    </div>
+  </div>
+  <div class="content">
+    <%= yield %>
+  </div>
+  </body>
+</html>

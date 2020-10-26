@@ -1,0 +1,15 @@
+<h1> the gossip project</h1>
+
+liste des gossips:
+<% @gossips.each do |t| %>
+
+<div class="gossip">
+ <div class="title">
+    <%= t.title %>
+ </div>
+ par : <%=@users.select { |u| u.id == t.user_id }[0].first_name%>
+ <div class="prompt">
+    <a href="/potin/<%= t.id%>"> lire le potin </a>
+ </div>
+</div>
+<% end %>

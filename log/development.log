@@ -1,0 +1,2710 @@
+Started GET "/" for 127.0.0.1 at 2020-10-26 11:41:43 +0100
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.4.4) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.4.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ /usr/share/rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (201.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ /usr/share/rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (99.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ /usr/share/rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/share/rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+Migrating to CreateUsers (20201022151321)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /usr/share/rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar, "last_name" varchar, "description" text, "email" varchar, "age" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20201022151321_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201022151321"]]
+  ↳ /usr/share/rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (108.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /usr/share/rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+Migrating to CreateCities (20201022153517)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /usr/share/rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "cities" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "zip_code" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20201022153517_create_cities.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201022153517"]]
+  ↳ /usr/share/rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (118.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /usr/share/rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+Migrating to CreatePotins (20201022154851)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /usr/share/rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "potins" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "content" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20201022154851_create_potins.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201022154851"]]
+  ↳ /usr/share/rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (107.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /usr/share/rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+Migrating to CreateTags (20201022155045)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /usr/share/rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "tags" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20201022155045_create_tags.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201022155045"]]
+  ↳ /usr/share/rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (119.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /usr/share/rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+Migrating to AddUserToPotin (20201022155621)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /usr/share/rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "potins" ADD "user_id" integer[0m
+  ↳ db/migrate/20201022155621_add_user_to_potin.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_potins_on_user_id" ON "potins" ("user_id")[0m
+  ↳ db/migrate/20201022155621_add_user_to_potin.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201022155621"]]
+  ↳ /usr/share/rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (129.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /usr/share/rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+Migrating to CreateRelations (20201022163523)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /usr/share/rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "relations" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20201022163523_create_relations.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201022163523"]]
+  ↳ /usr/share/rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (146.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /usr/share/rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+Migrating to CreateGossipTags (20201022163549)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /usr/share/rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "gossip_tags" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "potin_id" integer, "tag_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20201022163549_create_gossip_tags.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_gossip_tags_on_potin_id" ON "gossip_tags" ("potin_id")[0m
+  ↳ db/migrate/20201022163549_create_gossip_tags.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_gossip_tags_on_tag_id" ON "gossip_tags" ("tag_id")[0m
+  ↳ db/migrate/20201022163549_create_gossip_tags.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201022163549"]]
+  ↳ /usr/share/rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (129.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /usr/share/rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /usr/share/rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /usr/share/rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-10-26 10:42:05.442261"], ["updated_at", "2020-10-26 10:42:05.442261"]]
+  ↳ /usr/share/rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (77.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /usr/share/rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/share/rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/share/rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /usr/share/rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /usr/share/rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /usr/share/rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/share/rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+Started GET "/" for 127.0.0.1 at 2020-10-26 11:42:20 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/hp/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/hp/.rvm/gems/ruby-2.7.1/gems/railties-5.2.4.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/hp/.rvm/gems/ruby-2.7.1/gems/railties-5.2.4.4/lib/rails/templates/rails/welcome/index.html.erb (1.7ms)
+Completed 200 OK in 25ms (Views: 3.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-26 11:46:14 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/hp/.rvm/gems/ruby-2.7.1/gems/railties-5.2.4.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/hp/.rvm/gems/ruby-2.7.1/gems/railties-5.2.4.4/lib/rails/templates/rails/welcome/index.html.erb (2.9ms)
+Completed 200 OK in 6ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-26 11:46:30 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/hp/.rvm/gems/ruby-2.7.1/gems/railties-5.2.4.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/hp/.rvm/gems/ruby-2.7.1/gems/railties-5.2.4.4/lib/rails/templates/rails/welcome/index.html.erb (1.4ms)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-26 11:46:42 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/hp/.rvm/gems/ruby-2.7.1/gems/railties-5.2.4.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/hp/.rvm/gems/ruby-2.7.1/gems/railties-5.2.4.4/lib/rails/templates/rails/welcome/index.html.erb (1.5ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-26 11:46:49 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/hp/.rvm/gems/ruby-2.7.1/gems/railties-5.2.4.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/hp/.rvm/gems/ruby-2.7.1/gems/railties-5.2.4.4/lib/rails/templates/rails/welcome/index.html.erb (1.3ms)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-26 11:46:55 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/hp/.rvm/gems/ruby-2.7.1/gems/railties-5.2.4.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/hp/.rvm/gems/ruby-2.7.1/gems/railties-5.2.4.4/lib/rails/templates/rails/welcome/index.html.erb (1.7ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-26 11:52:04 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/hp/.rvm/gems/ruby-2.7.1/gems/railties-5.2.4.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/hp/.rvm/gems/ruby-2.7.1/gems/railties-5.2.4.4/lib/rails/templates/rails/welcome/index.html.erb (1.6ms)
+Completed 200 OK in 49ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-26 12:13:35 +0100
+  
+ActionController::RoutingError (uninitialized constant StaticController):
+  
+bootsnap (1.4.8) lib/bootsnap/load_path_cache/core_ext/active_support.rb:80:in `block in load_missing_constant'
+bootsnap (1.4.8) lib/bootsnap/load_path_cache/core_ext/active_support.rb:9:in `without_bootsnap_cache'
+bootsnap (1.4.8) lib/bootsnap/load_path_cache/core_ext/active_support.rb:80:in `rescue in load_missing_constant'
+bootsnap (1.4.8) lib/bootsnap/load_path_cache/core_ext/active_support.rb:59:in `load_missing_constant'
+activesupport (5.2.4.4) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.4.4) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.4.4) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.4.4) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.4.4) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.4.4) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.4.4) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.4) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2020-10-26 12:13:55 +0100
+Processing by ApplicationController#test as HTML
+Completed 406 Not Acceptable in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (ApplicationController#test is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.4.4) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.4.4) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.4.4) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.4.4) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.4.4) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.4.4) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.4.4) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.4.4) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.4.4) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.4.4) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.4.4) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.4.4) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.4.4) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.4.4) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.4.4) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.4.4) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.4.4) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.4.4) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.4.4) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.4.4) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.4.4) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.4) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2020-10-26 12:15:29 +0100
+Processing by ApplicationController#test as HTML
+Completed 406 Not Acceptable in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (ApplicationController#test is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.4.4) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.4.4) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.4.4) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.4.4) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.4.4) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.4.4) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.4.4) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.4.4) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.4.4) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.4.4) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.4.4) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.4.4) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.4.4) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.4.4) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.4.4) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.4.4) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.4.4) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.4.4) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.4.4) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.4.4) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.4.4) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.4) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2020-10-26 17:44:58 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/hp/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by ApplicationController#test as HTML
+Completed 406 Not Acceptable in 12ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (ApplicationController#test is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.4.4) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.4.4) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.4.4) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.4.4) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.4.4) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.4.4) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.4.4) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.4.4) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.4.4) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.4.4) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.4.4) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.4.4) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.4.4) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.4.4) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.4.4) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.4.4) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.4.4) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.4.4) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.4.4) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.4.4) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.4.4) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.4) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2020-10-26 17:46:06 +0100
+Processing by ApplicationController#test as HTML
+  Rendering application/test.html.erb within layouts/application
+  Rendered application/test.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 476ms (Views: 475.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-26 17:52:19 +0100
+Processing by ApplicationController#test as HTML
+  Rendering application/test.html.erb within layouts/application
+  Rendered application/test.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 11ms (Views: 9.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-26 17:54:50 +0100
+  
+ActionController::RoutingError (uninitialized constant HomeController):
+  
+bootsnap (1.4.8) lib/bootsnap/load_path_cache/core_ext/active_support.rb:80:in `block in load_missing_constant'
+bootsnap (1.4.8) lib/bootsnap/load_path_cache/core_ext/active_support.rb:9:in `without_bootsnap_cache'
+bootsnap (1.4.8) lib/bootsnap/load_path_cache/core_ext/active_support.rb:80:in `rescue in load_missing_constant'
+bootsnap (1.4.8) lib/bootsnap/load_path_cache/core_ext/active_support.rb:59:in `load_missing_constant'
+activesupport (5.2.4.4) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.4.4) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.4.4) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.4.4) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.4.4) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.4.4) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.4.4) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.4) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2020-10-26 17:55:30 +0100
+  
+ActionController::RoutingError (uninitialized constant HomeController):
+  
+bootsnap (1.4.8) lib/bootsnap/load_path_cache/core_ext/active_support.rb:80:in `block in load_missing_constant'
+bootsnap (1.4.8) lib/bootsnap/load_path_cache/core_ext/active_support.rb:9:in `without_bootsnap_cache'
+bootsnap (1.4.8) lib/bootsnap/load_path_cache/core_ext/active_support.rb:80:in `rescue in load_missing_constant'
+bootsnap (1.4.8) lib/bootsnap/load_path_cache/core_ext/active_support.rb:59:in `load_missing_constant'
+activesupport (5.2.4.4) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.4.4) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.4.4) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.4.4) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.4.4) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.4.4) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.4.4) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.4) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2020-10-26 17:55:35 +0100
+  
+ActionController::RoutingError (uninitialized constant HomeController):
+  
+bootsnap (1.4.8) lib/bootsnap/load_path_cache/core_ext/active_support.rb:80:in `block in load_missing_constant'
+bootsnap (1.4.8) lib/bootsnap/load_path_cache/core_ext/active_support.rb:9:in `without_bootsnap_cache'
+bootsnap (1.4.8) lib/bootsnap/load_path_cache/core_ext/active_support.rb:80:in `rescue in load_missing_constant'
+bootsnap (1.4.8) lib/bootsnap/load_path_cache/core_ext/active_support.rb:59:in `load_missing_constant'
+activesupport (5.2.4.4) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.4.4) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.4.4) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.4.4) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.4.4) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.4.4) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.4.4) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.4) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2020-10-26 17:55:53 +0100
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb
+  Rendered home/home.html.erb (0.3ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-26 17:55:58 +0100
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb
+  Rendered home/home.html.erb (0.3ms)
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-26 17:56:11 +0100
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb
+  Rendered home/home.html.erb (0.3ms)
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-26 17:56:48 +0100
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/home
+  Rendered home/home.html.erb within layouts/home (0.3ms)
+Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-26 17:58:24 +0100
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/home
+  Rendered home/home.html.erb within layouts/home (0.3ms)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-26 17:58:39 +0100
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/home
+  Rendered home/home.html.erb within layouts/home (0.2ms)
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/share/rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+Started GET "/" for 127.0.0.1 at 2020-10-26 18:03:21 +0100
+Processing by HomeController#home as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant HomeController::Potins):
+  
+app/controllers/home_controller.rb:3:in `home'
+  [1m[36mPotin Load (17.4ms)[0m  [1m[34mSELECT  "potins".* FROM "potins" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/" for 127.0.0.1 at 2020-10-26 18:09:14 +0100
+Processing by HomeController#home as HTML
+  [1m[36mPotin Load (0.2ms)[0m  [1m[34mSELECT "potins".* FROM "potins"[0m
+  ↳ app/controllers/home_controller.rb:4
+  Rendering home/home.html.erb within layouts/home
+  Rendered home/home.html.erb within layouts/home (0.2ms)
+Completed 200 OK in 14ms (Views: 9.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-26 18:13:28 +0100
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/home
+  Rendered home/home.html.erb within layouts/home (0.3ms)
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/share/rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[36mUser Load (15.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:10
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:16
+  [1m[36mUser Create (43.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "description", "email", "age", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Ezra"], ["last_name", "Ryan"], ["description", "Fugit corporis aut animi."], ["email", "lucas@pacocha-blick.net"], ["age", 33], ["created_at", "2020-10-26 17:15:22.476923"], ["updated_at", "2020-10-26 17:15:22.476923"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (748.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[36mCity Create (0.2ms)[0m  [1m[32mINSERT INTO "cities" ("name", "zip_code", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Lake Lahoma"], ["zip_code", "01484"], ["created_at", "2020-10-26 17:15:23.274227"], ["updated_at", "2020-10-26 17:15:23.274227"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (83.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:16
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "description", "email", "age", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Jewel"], ["last_name", "Hettinger"], ["description", "Iste nam quasi odio."], ["email", "charley.jaskolski@olson-schoen.org"], ["age", 40], ["created_at", "2020-10-26 17:15:23.360344"], ["updated_at", "2020-10-26 17:15:23.360344"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (107.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[36mCity Create (0.2ms)[0m  [1m[32mINSERT INTO "cities" ("name", "zip_code", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Ivonneborough"], ["zip_code", "54103-5314"], ["created_at", "2020-10-26 17:15:23.470857"], ["updated_at", "2020-10-26 17:15:23.470857"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (108.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:16
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "description", "email", "age", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Roy"], ["last_name", "O'Connell"], ["description", "Sit quia voluptas soluta."], ["email", "abigail@gibson-brekke.org"], ["age", 37], ["created_at", "2020-10-26 17:15:23.582312"], ["updated_at", "2020-10-26 17:15:23.582312"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (85.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[36mCity Create (0.5ms)[0m  [1m[32mINSERT INTO "cities" ("name", "zip_code", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "West Murrayville"], ["zip_code", "81269-9943"], ["created_at", "2020-10-26 17:15:23.671119"], ["updated_at", "2020-10-26 17:15:23.671119"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (73.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:16
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "description", "email", "age", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Iesha"], ["last_name", "Runolfsson"], ["description", "Sit quasi veritatis est."], ["email", "hung@sauer-wisoky.biz"], ["age", 21], ["created_at", "2020-10-26 17:15:23.748313"], ["updated_at", "2020-10-26 17:15:23.748313"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (86.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[36mCity Create (0.6ms)[0m  [1m[32mINSERT INTO "cities" ("name", "zip_code", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Klockoview"], ["zip_code", "38108"], ["created_at", "2020-10-26 17:15:23.837343"], ["updated_at", "2020-10-26 17:15:23.837343"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (106.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:16
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "description", "email", "age", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "China"], ["last_name", "Runte"], ["description", "Architecto et fugiat rerum."], ["email", "faviola@nienow.info"], ["age", 39], ["created_at", "2020-10-26 17:15:23.948237"], ["updated_at", "2020-10-26 17:15:23.948237"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (106.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[36mCity Create (0.3ms)[0m  [1m[32mINSERT INTO "cities" ("name", "zip_code", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Bartonside"], ["zip_code", "20260-6796"], ["created_at", "2020-10-26 17:15:24.063491"], ["updated_at", "2020-10-26 17:15:24.063491"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (80.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:16
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "description", "email", "age", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Charlette"], ["last_name", "Kreiger"], ["description", "Sit fugiat ea quae."], ["email", "jimmy.parisian@paucek.com"], ["age", 30], ["created_at", "2020-10-26 17:15:24.153542"], ["updated_at", "2020-10-26 17:15:24.153542"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (88.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[36mCity Create (0.3ms)[0m  [1m[32mINSERT INTO "cities" ("name", "zip_code", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Naderstad"], ["zip_code", "40981-0437"], ["created_at", "2020-10-26 17:15:24.250684"], ["updated_at", "2020-10-26 17:15:24.250684"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (80.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:16
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "description", "email", "age", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Kurtis"], ["last_name", "Nikolaus"], ["description", "Architecto nulla id omnis."], ["email", "bunny_nolan@osinski-jast.net"], ["age", 24], ["created_at", "2020-10-26 17:15:24.341582"], ["updated_at", "2020-10-26 17:15:24.341582"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (101.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[36mCity Create (0.2ms)[0m  [1m[32mINSERT INTO "cities" ("name", "zip_code", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "West Wayneberg"], ["zip_code", "60158-3358"], ["created_at", "2020-10-26 17:15:24.448061"], ["updated_at", "2020-10-26 17:15:24.448061"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (107.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:16
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "description", "email", "age", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Georgeanna"], ["last_name", "Hackett"], ["description", "Consequatur veritatis sit enim."], ["email", "mara_brakus@jerde-brekke.com"], ["age", 26], ["created_at", "2020-10-26 17:15:24.559259"], ["updated_at", "2020-10-26 17:15:24.559259"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (84.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[36mCity Create (0.2ms)[0m  [1m[32mINSERT INTO "cities" ("name", "zip_code", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Ardellhaven"], ["zip_code", "96134"], ["created_at", "2020-10-26 17:15:24.647225"], ["updated_at", "2020-10-26 17:15:24.647225"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (73.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:16
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "description", "email", "age", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Kesha"], ["last_name", "Christiansen"], ["description", "Ex numquam deserunt esse."], ["email", "aaron_block@pouros.org"], ["age", 27], ["created_at", "2020-10-26 17:15:24.726191"], ["updated_at", "2020-10-26 17:15:24.726191"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (106.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[36mCity Create (0.2ms)[0m  [1m[32mINSERT INTO "cities" ("name", "zip_code", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "East Albertine"], ["zip_code", "01907-4129"], ["created_at", "2020-10-26 17:15:24.835903"], ["updated_at", "2020-10-26 17:15:24.835903"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (96.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:16
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "description", "email", "age", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Joselyn"], ["last_name", "Hessel"], ["description", "Rerum atque nam voluptatem."], ["email", "lucretia.balistreri@marvin.info"], ["age", 26], ["created_at", "2020-10-26 17:15:24.937087"], ["updated_at", "2020-10-26 17:15:24.937087"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (83.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[36mCity Create (0.3ms)[0m  [1m[32mINSERT INTO "cities" ("name", "zip_code", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "New Bethanieside"], ["zip_code", "55605-6815"], ["created_at", "2020-10-26 17:15:25.024526"], ["updated_at", "2020-10-26 17:15:25.024526"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (85.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:24
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+  [1m[36mPotin Create (10.6ms)[0m  [1m[32mINSERT INTO "potins" ("title", "content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Temporibus cumque omnis ab."], ["content", "Doloribus aut dignissimos distinctio."], ["created_at", "2020-10-26 17:15:25.190557"], ["updated_at", "2020-10-26 17:15:25.190557"], ["user_id", 4]]
+  ↳ db/seeds.rb:24
+  [1m[35m (85.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:24
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:24
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+  [1m[36mPotin Create (0.2ms)[0m  [1m[32mINSERT INTO "potins" ("title", "content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Autem et maxime esse."], ["content", "Totam explicabo vel ducimus."], ["created_at", "2020-10-26 17:15:25.296095"], ["updated_at", "2020-10-26 17:15:25.296095"], ["user_id", 3]]
+  ↳ db/seeds.rb:24
+  [1m[35m (68.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:24
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:24
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+  [1m[36mPotin Create (0.2ms)[0m  [1m[32mINSERT INTO "potins" ("title", "content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Sit maiores molestias et."], ["content", "Veritatis dolor saepe optio."], ["created_at", "2020-10-26 17:15:25.381851"], ["updated_at", "2020-10-26 17:15:25.381851"], ["user_id", 6]]
+  ↳ db/seeds.rb:24
+  [1m[35m (83.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:24
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:24
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+  [1m[36mPotin Create (0.2ms)[0m  [1m[32mINSERT INTO "potins" ("title", "content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Odio excepturi hic sint."], ["content", "Soluta ipsam enim et."], ["created_at", "2020-10-26 17:15:25.469106"], ["updated_at", "2020-10-26 17:15:25.469106"], ["user_id", 3]]
+  ↳ db/seeds.rb:24
+  [1m[35m (84.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:24
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:24
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+  [1m[36mPotin Create (0.2ms)[0m  [1m[32mINSERT INTO "potins" ("title", "content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Rem iste iusto assumenda."], ["content", "Inventore praesentium et harum."], ["created_at", "2020-10-26 17:15:25.558813"], ["updated_at", "2020-10-26 17:15:25.558813"], ["user_id", 6]]
+  ↳ db/seeds.rb:24
+  [1m[35m (83.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:24
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:24
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+  [1m[36mPotin Create (0.2ms)[0m  [1m[32mINSERT INTO "potins" ("title", "content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Porro quibusdam et dolorem."], ["content", "Porro saepe laudantium animi."], ["created_at", "2020-10-26 17:15:25.646813"], ["updated_at", "2020-10-26 17:15:25.646813"], ["user_id", 3]]
+  ↳ db/seeds.rb:24
+  [1m[35m (119.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:24
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:24
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+  [1m[36mPotin Create (0.2ms)[0m  [1m[32mINSERT INTO "potins" ("title", "content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Voluptate minima omnis eum."], ["content", "Dolorem officiis reprehenderit nesciunt."], ["created_at", "2020-10-26 17:15:25.770736"], ["updated_at", "2020-10-26 17:15:25.770736"], ["user_id", 5]]
+  ↳ db/seeds.rb:24
+  [1m[35m (105.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:24
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:24
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+  [1m[36mPotin Create (0.2ms)[0m  [1m[32mINSERT INTO "potins" ("title", "content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Accusamus pariatur debitis et."], ["content", "Eos nobis fuga alias."], ["created_at", "2020-10-26 17:15:25.879994"], ["updated_at", "2020-10-26 17:15:25.879994"], ["user_id", 8]]
+  ↳ db/seeds.rb:24
+  [1m[35m (95.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:24
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:24
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+  [1m[36mPotin Create (0.2ms)[0m  [1m[32mINSERT INTO "potins" ("title", "content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Eius ut provident id."], ["content", "Natus consequatur velit quod."], ["created_at", "2020-10-26 17:15:25.979896"], ["updated_at", "2020-10-26 17:15:25.979896"], ["user_id", 10]]
+  ↳ db/seeds.rb:24
+  [1m[35m (106.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:24
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:24
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+  [1m[36mPotin Create (0.2ms)[0m  [1m[32mINSERT INTO "potins" ("title", "content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Occaecati assumenda voluptatem quis."], ["content", "Fugit molestiae odio libero."], ["created_at", "2020-10-26 17:15:26.090570"], ["updated_at", "2020-10-26 17:15:26.090570"], ["user_id", 1]]
+  ↳ db/seeds.rb:24
+  [1m[35m (84.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:24
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:24
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+  [1m[36mPotin Create (0.2ms)[0m  [1m[32mINSERT INTO "potins" ("title", "content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Aut veniam aliquam natus."], ["content", "Sed repudiandae incidunt consequatur."], ["created_at", "2020-10-26 17:15:26.179260"], ["updated_at", "2020-10-26 17:15:26.179260"], ["user_id", 9]]
+  ↳ db/seeds.rb:24
+  [1m[35m (120.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:24
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:24
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+  [1m[36mPotin Create (0.2ms)[0m  [1m[32mINSERT INTO "potins" ("title", "content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Accusantium harum sequi omnis."], ["content", "Sunt ea voluptatem ut."], ["created_at", "2020-10-26 17:15:26.303174"], ["updated_at", "2020-10-26 17:15:26.303174"], ["user_id", 7]]
+  ↳ db/seeds.rb:24
+  [1m[35m (118.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:24
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:24
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+  [1m[36mPotin Create (0.2ms)[0m  [1m[32mINSERT INTO "potins" ("title", "content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Vel excepturi qui error."], ["content", "Necessitatibus explicabo asperiores est."], ["created_at", "2020-10-26 17:15:26.425341"], ["updated_at", "2020-10-26 17:15:26.425341"], ["user_id", 4]]
+  ↳ db/seeds.rb:24
+  [1m[35m (84.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:24
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:24
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+  [1m[36mPotin Create (0.2ms)[0m  [1m[32mINSERT INTO "potins" ("title", "content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Voluptatem culpa sed vel."], ["content", "Omnis veritatis vel consequatur."], ["created_at", "2020-10-26 17:15:26.513988"], ["updated_at", "2020-10-26 17:15:26.513988"], ["user_id", 6]]
+  ↳ db/seeds.rb:24
+  [1m[35m (107.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:24
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:24
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+  [1m[36mPotin Create (0.2ms)[0m  [1m[32mINSERT INTO "potins" ("title", "content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Molestiae distinctio magnam omnis."], ["content", "Beatae qui dolorum ut."], ["created_at", "2020-10-26 17:15:26.624864"], ["updated_at", "2020-10-26 17:15:26.624864"], ["user_id", 2]]
+  ↳ db/seeds.rb:24
+  [1m[35m (107.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:24
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:24
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+  [1m[36mPotin Create (0.2ms)[0m  [1m[32mINSERT INTO "potins" ("title", "content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Impedit veritatis maxime blanditiis."], ["content", "Assumenda asperiores aperiam enim."], ["created_at", "2020-10-26 17:15:26.735928"], ["updated_at", "2020-10-26 17:15:26.735928"], ["user_id", 5]]
+  ↳ db/seeds.rb:24
+  [1m[35m (118.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:24
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:24
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+  [1m[36mPotin Create (0.2ms)[0m  [1m[32mINSERT INTO "potins" ("title", "content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Corporis qui ea molestias."], ["content", "Atque praesentium rerum quidem."], ["created_at", "2020-10-26 17:15:26.858145"], ["updated_at", "2020-10-26 17:15:26.858145"], ["user_id", 5]]
+  ↳ db/seeds.rb:24
+  [1m[35m (93.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:24
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:24
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+  [1m[36mPotin Create (0.2ms)[0m  [1m[32mINSERT INTO "potins" ("title", "content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Quidem accusamus quia eum."], ["content", "Natus fuga labore voluptas."], ["created_at", "2020-10-26 17:15:26.955774"], ["updated_at", "2020-10-26 17:15:26.955774"], ["user_id", 9]]
+  ↳ db/seeds.rb:24
+  [1m[35m (97.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:24
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:24
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+  [1m[36mPotin Create (0.2ms)[0m  [1m[32mINSERT INTO "potins" ("title", "content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Eos quibusdam id molestiae."], ["content", "Ut quos nulla id."], ["created_at", "2020-10-26 17:15:27.057717"], ["updated_at", "2020-10-26 17:15:27.057717"], ["user_id", 10]]
+  ↳ db/seeds.rb:24
+  [1m[35m (82.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:24
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:24
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+  [1m[36mPotin Create (0.2ms)[0m  [1m[32mINSERT INTO "potins" ("title", "content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Recusandae veniam ut molestias."], ["content", "Eligendi voluptatem unde cumque."], ["created_at", "2020-10-26 17:15:27.144254"], ["updated_at", "2020-10-26 17:15:27.144254"], ["user_id", 3]]
+  ↳ db/seeds.rb:24
+  [1m[35m (86.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:28
+  [1m[36mTag Create (7.5ms)[0m  [1m[32mINSERT INTO "tags" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Adipisci possimus laborum molestiae."], ["created_at", "2020-10-26 17:15:27.237735"], ["updated_at", "2020-10-26 17:15:27.237735"]]
+  ↳ db/seeds.rb:28
+  [1m[35m (96.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:28
+  [1m[36mTag Create (0.2ms)[0m  [1m[32mINSERT INTO "tags" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Quae earum et magni."], ["created_at", "2020-10-26 17:15:27.344513"], ["updated_at", "2020-10-26 17:15:27.344513"]]
+  ↳ db/seeds.rb:28
+  [1m[35m (75.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:28
+  [1m[36mTag Create (0.2ms)[0m  [1m[32mINSERT INTO "tags" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Iusto iure quo aut."], ["created_at", "2020-10-26 17:15:27.421928"], ["updated_at", "2020-10-26 17:15:27.421928"]]
+  ↳ db/seeds.rb:28
+  [1m[35m (75.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:28
+  [1m[36mTag Create (0.2ms)[0m  [1m[32mINSERT INTO "tags" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Deleniti ut qui nisi."], ["created_at", "2020-10-26 17:15:27.499846"], ["updated_at", "2020-10-26 17:15:27.499846"]]
+  ↳ db/seeds.rb:28
+  [1m[35m (85.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:28
+  [1m[36mTag Create (0.2ms)[0m  [1m[32mINSERT INTO "tags" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Velit quas molestiae nostrum."], ["created_at", "2020-10-26 17:15:27.588465"], ["updated_at", "2020-10-26 17:15:27.588465"]]
+  ↳ db/seeds.rb:28
+  [1m[35m (84.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:28
+  [1m[36mTag Create (0.2ms)[0m  [1m[32mINSERT INTO "tags" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Et autem voluptates illum."], ["created_at", "2020-10-26 17:15:27.675563"], ["updated_at", "2020-10-26 17:15:27.675563"]]
+  ↳ db/seeds.rb:28
+  [1m[35m (110.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:28
+  [1m[36mTag Create (0.2ms)[0m  [1m[32mINSERT INTO "tags" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Dicta odio id vitae."], ["created_at", "2020-10-26 17:15:27.788529"], ["updated_at", "2020-10-26 17:15:27.788529"]]
+  ↳ db/seeds.rb:28
+  [1m[35m (108.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:28
+  [1m[36mTag Create (0.2ms)[0m  [1m[32mINSERT INTO "tags" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Consequatur voluptatem et cumque."], ["created_at", "2020-10-26 17:15:27.899326"], ["updated_at", "2020-10-26 17:15:27.899326"]]
+  ↳ db/seeds.rb:28
+  [1m[35m (95.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:28
+  [1m[36mTag Create (0.2ms)[0m  [1m[32mINSERT INTO "tags" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Non sunt est natus."], ["created_at", "2020-10-26 17:15:27.997047"], ["updated_at", "2020-10-26 17:15:27.997047"]]
+  ↳ db/seeds.rb:28
+  [1m[35m (88.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:28
+  [1m[36mTag Create (0.2ms)[0m  [1m[32mINSERT INTO "tags" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Autem quia ratione rerum."], ["created_at", "2020-10-26 17:15:28.087811"], ["updated_at", "2020-10-26 17:15:28.087811"]]
+  ↳ db/seeds.rb:28
+  [1m[35m (86.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:28
+Started GET "/" for 127.0.0.1 at 2020-10-26 18:15:32 +0100
+Processing by HomeController#home as HTML
+  [1m[36mPotin Load (0.2ms)[0m  [1m[34mSELECT "potins".* FROM "potins"[0m
+  ↳ app/controllers/home_controller.rb:4
+  Rendering home/home.html.erb within layouts/home
+  Rendered home/home.html.erb within layouts/home (0.4ms)
+Completed 200 OK in 22ms (Views: 13.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-26 18:18:38 +0100
+Processing by HomeController#home as HTML
+  [1m[36mPotin Load (0.2ms)[0m  [1m[34mSELECT "potins".* FROM "potins"[0m
+  ↳ app/controllers/home_controller.rb:4
+  Rendering home/home.html.erb within layouts/home
+  Rendered home/home.html.erb within layouts/home (0.6ms)
+Completed 200 OK in 11ms (Views: 9.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-26 18:19:34 +0100
+Processing by HomeController#home as HTML
+  [1m[36mPotin Load (0.2ms)[0m  [1m[34mSELECT "potins".* FROM "potins"[0m
+  ↳ app/controllers/home_controller.rb:4
+  Rendering home/home.html.erb within layouts/home
+  Rendered home/home.html.erb within layouts/home (0.4ms)
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-26 18:19:47 +0100
+Processing by HomeController#home as HTML
+  [1m[36mPotin Load (0.1ms)[0m  [1m[34mSELECT "potins".* FROM "potins"[0m
+  ↳ app/controllers/home_controller.rb:4
+  Rendering home/home.html.erb within layouts/home
+  Rendered home/home.html.erb within layouts/home (0.5ms)
+Completed 200 OK in 15ms (Views: 13.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-26 18:19:57 +0100
+Processing by HomeController#home as HTML
+  [1m[36mPotin Load (0.1ms)[0m  [1m[34mSELECT "potins".* FROM "potins"[0m
+  ↳ app/controllers/home_controller.rb:4
+  Rendering home/home.html.erb within layouts/home
+  Rendered home/home.html.erb within layouts/home (0.5ms)
+Completed 200 OK in 15ms (Views: 13.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-26 18:22:22 +0100
+Processing by HomeController#home as HTML
+  [1m[36mPotin Load (0.1ms)[0m  [1m[34mSELECT "potins".* FROM "potins"[0m
+  ↳ app/controllers/home_controller.rb:4
+  Rendering home/home.html.erb within layouts/home
+  Rendered home/home.html.erb within layouts/home (0.4ms)
+Completed 200 OK in 13ms (Views: 11.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/team" for 127.0.0.1 at 2020-10-26 18:26:52 +0100
+  
+ActionController::RoutingError (uninitialized constant TrevialsController):
+  
+bootsnap (1.4.8) lib/bootsnap/load_path_cache/core_ext/active_support.rb:80:in `block in load_missing_constant'
+bootsnap (1.4.8) lib/bootsnap/load_path_cache/core_ext/active_support.rb:9:in `without_bootsnap_cache'
+bootsnap (1.4.8) lib/bootsnap/load_path_cache/core_ext/active_support.rb:80:in `rescue in load_missing_constant'
+bootsnap (1.4.8) lib/bootsnap/load_path_cache/core_ext/active_support.rb:59:in `load_missing_constant'
+activesupport (5.2.4.4) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.4.4) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.4.4) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.4.4) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.4.4) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.4.4) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.4.4) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.4) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/team" for 127.0.0.1 at 2020-10-26 18:27:08 +0100
+  
+LoadError (Unable to autoload constant TrivialsController, expected /home/hp/thp/w3/d1/gossips/app/controllers/trivials_controller.rb to define it):
+  
+activesupport (5.2.4.4) lib/active_support/dependencies.rb:511:in `load_missing_constant'
+bootsnap (1.4.8) lib/bootsnap/load_path_cache/core_ext/active_support.rb:61:in `block in load_missing_constant'
+bootsnap (1.4.8) lib/bootsnap/load_path_cache/core_ext/active_support.rb:17:in `allow_bootsnap_retry'
+bootsnap (1.4.8) lib/bootsnap/load_path_cache/core_ext/active_support.rb:60:in `load_missing_constant'
+activesupport (5.2.4.4) lib/active_support/dependencies.rb:195:in `const_missing'
+activesupport (5.2.4.4) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.4.4) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.4.4) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.4.4) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.4.4) lib/active_support/inflector/methods.rb:281:in `constantize'
+activesupport (5.2.4.4) lib/active_support/dependencies.rb:582:in `get'
+activesupport (5.2.4.4) lib/active_support/dependencies.rb:613:in `constantize'
+actionpack (5.2.4.4) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.4.4) lib/action_dispatch/http/parameters.rb:101:in `binary_params_for?'
+actionpack (5.2.4.4) lib/action_dispatch/http/parameters.rb:92:in `set_binary_encoding'
+actionpack (5.2.4.4) lib/action_dispatch/http/parameters.rb:69:in `path_parameters='
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.4) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/team" for 127.0.0.1 at 2020-10-26 18:28:02 +0100
+  
+LoadError (Unable to autoload constant TrivialsController, expected /home/hp/thp/w3/d1/gossips/app/controllers/trivials_controller.rb to define it):
+  
+activesupport (5.2.4.4) lib/active_support/dependencies.rb:511:in `load_missing_constant'
+bootsnap (1.4.8) lib/bootsnap/load_path_cache/core_ext/active_support.rb:61:in `block in load_missing_constant'
+bootsnap (1.4.8) lib/bootsnap/load_path_cache/core_ext/active_support.rb:17:in `allow_bootsnap_retry'
+bootsnap (1.4.8) lib/bootsnap/load_path_cache/core_ext/active_support.rb:60:in `load_missing_constant'
+activesupport (5.2.4.4) lib/active_support/dependencies.rb:195:in `const_missing'
+activesupport (5.2.4.4) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.4.4) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.4.4) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.4.4) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.4.4) lib/active_support/inflector/methods.rb:281:in `constantize'
+activesupport (5.2.4.4) lib/active_support/dependencies.rb:582:in `get'
+activesupport (5.2.4.4) lib/active_support/dependencies.rb:613:in `constantize'
+actionpack (5.2.4.4) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.4.4) lib/action_dispatch/http/parameters.rb:101:in `binary_params_for?'
+actionpack (5.2.4.4) lib/action_dispatch/http/parameters.rb:92:in `set_binary_encoding'
+actionpack (5.2.4.4) lib/action_dispatch/http/parameters.rb:69:in `path_parameters='
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.4) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/team" for 127.0.0.1 at 2020-10-26 18:28:28 +0100
+Processing by TrivialsController#team as HTML
+  Rendering trivials/team.html.erb
+  Rendered trivials/team.html.erb (0.3ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/team" for 127.0.0.1 at 2020-10-26 18:31:02 +0100
+Processing by TrivialsController#team as HTML
+  Rendering trivials/team.html.erb
+  Rendered trivials/team.html.erb (0.3ms)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2020-10-26 18:36:41 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/contact"):
+  
+actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/contact" for 127.0.0.1 at 2020-10-26 19:14:46 +0100
+Processing by TrivialsController#contact as HTML
+  Rendering trivials/contact.html.erb
+  Rendered trivials/contact.html.erb (0.5ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact/us" for 127.0.0.1 at 2020-10-26 19:19:37 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/contact/us"):
+  
+actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/contact/us" for 127.0.0.1 at 2020-10-26 19:21:18 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/contact/us"):
+  
+actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/contact/welcome/Julien" for 127.0.0.1 at 2020-10-26 19:22:56 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/contact/welcome/Julien"):
+  
+actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/welcome/Julien" for 127.0.0.1 at 2020-10-26 19:23:06 +0100
+Processing by HomeController#welcome as HTML
+  Parameters: {"name"=>"Julien"}
+Completed 406 Not Acceptable in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (HomeController#welcome is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.4.4) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.4.4) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.4.4) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.4.4) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.4.4) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.4.4) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.4.4) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.4.4) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.4.4) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.4.4) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.4.4) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.4.4) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.4.4) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.4.4) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.4.4) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.4.4) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.4.4) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.4.4) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.4.4) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.4.4) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.4.4) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.4) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/welcome/Julien" for 127.0.0.1 at 2020-10-26 19:23:41 +0100
+Processing by HomeController#welcome as HTML
+  Parameters: {"name"=>"Julien"}
+  Rendering home/welcome.html.erb within layouts/home
+  Rendered home/welcome.html.erb within layouts/home (0.3ms)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/Julien" for 127.0.0.1 at 2020-10-26 19:24:36 +0100
+Processing by HomeController#welcome as HTML
+  Parameters: {"name"=>"Julien"}
+  Rendering home/welcome.html.erb within layouts/home
+  Rendered home/welcome.html.erb within layouts/home (0.4ms)
+Completed 200 OK in 13ms (Views: 11.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/Julien" for 127.0.0.1 at 2020-10-26 19:24:54 +0100
+Processing by HomeController#welcome as HTML
+  Parameters: {"name"=>"Julien"}
+  Rendering home/welcome.html.erb within layouts/home
+  Rendered home/welcome.html.erb within layouts/home (140.3ms)
+Completed 500 Internal Server Error in 142ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `name' for #<#<Class:0x00007f1f8413dd28>:0x00007f1f88ccaca0>
+Did you mean?  @name):
+    1: <h2> Bienvenue, <%name%>
+  
+app/views/home/welcome.html.erb:1:in `_app_views_home_welcome_html_erb__4314154736540578257_41500'
+Started GET "/welcome/Julien" for 127.0.0.1 at 2020-10-26 19:25:02 +0100
+Processing by HomeController#welcome as HTML
+  Parameters: {"name"=>"Julien"}
+  Rendering home/welcome.html.erb within layouts/home
+  Rendered home/welcome.html.erb within layouts/home (0.4ms)
+Completed 200 OK in 26ms (Views: 25.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/Julien" for 127.0.0.1 at 2020-10-26 19:32:21 +0100
+Processing by HomeController#welcome as HTML
+  Parameters: {"name"=>"Julien"}
+  Rendering home/welcome.html.erb within layouts/home
+  Rendered home/welcome.html.erb within layouts/home (1.1ms)
+Completed 200 OK in 22ms (Views: 20.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/Julien" for 127.0.0.1 at 2020-10-26 19:33:53 +0100
+Processing by HomeController#welcome as HTML
+  Parameters: {"name"=>"Julien"}
+  Rendering home/welcome.html.erb within layouts/home
+  Rendered home/welcome.html.erb within layouts/home (0.3ms)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-26 19:34:11 +0100
+Processing by HomeController#home as HTML
+  [1m[36mPotin Load (0.2ms)[0m  [1m[34mSELECT "potins".* FROM "potins"[0m
+  ↳ app/controllers/home_controller.rb:4
+  Rendering home/home.html.erb within layouts/home
+  Rendered home/home.html.erb within layouts/home (0.6ms)
+Completed 200 OK in 25ms (Views: 9.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-26 19:35:02 +0100
+Processing by HomeController#home as HTML
+  [1m[36mPotin Load (0.2ms)[0m  [1m[34mSELECT "potins".* FROM "potins"[0m
+  ↳ app/controllers/home_controller.rb:4
+  Rendering home/home.html.erb within layouts/home
+  Rendered home/home.html.erb within layouts/home (0.7ms)
+Completed 200 OK in 14ms (Views: 11.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-26 19:36:12 +0100
+Processing by HomeController#home as HTML
+  [1m[36mPotin Load (0.2ms)[0m  [1m[34mSELECT "potins".* FROM "potins"[0m
+  ↳ app/controllers/home_controller.rb:4
+  Rendering home/home.html.erb within layouts/home
+  Rendered home/home.html.erb within layouts/home (0.5ms)
+Completed 200 OK in 27ms (Views: 25.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-26 19:46:52 +0100
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/home
+  [1m[36mPotin Load (0.2ms)[0m  [1m[34mSELECT "potins".* FROM "potins"[0m
+  ↳ app/views/home/home.html.erb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/home/home.html.erb:11
+  Rendered home/home.html.erb within layouts/home (15.2ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `first_name' for #<Array:0x00007f1f894ce050>):
+     8:     <%= t.title %>
+     9:  </div>
+    10:  <div class="author">
+    11:  par : <%=@users.select { |u| u.id == t.user_id }.first_name%>
+    12:  </div>
+    13: </div>
+    14: <% end %>
+  
+app/views/home/home.html.erb:11:in `block in _app_views_home_home_html_erb___189227068144553016_44240'
+app/views/home/home.html.erb:4:in `_app_views_home_home_html_erb___189227068144553016_44240'
+Started GET "/" for 127.0.0.1 at 2020-10-26 19:47:33 +0100
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/home
+  [1m[36mPotin Load (0.2ms)[0m  [1m[34mSELECT "potins".* FROM "potins"[0m
+  ↳ app/views/home/home.html.erb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/home/home.html.erb:11
+  Rendered home/home.html.erb within layouts/home (5.0ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `first_name' for #<Array:0x00007f1f89353798>):
+     8:     <%= t.title %>
+     9:  </div>
+    10:  <div class="author">
+    11:  par : <%=a = @users.select { |u| u.id == t.user_id }%> <%=a.first_name%>
+    12:  </div>
+    13: </div>
+    14: <% end %>
+  
+app/views/home/home.html.erb:11:in `block in _app_views_home_home_html_erb___189227068144553016_44760'
+app/views/home/home.html.erb:4:in `_app_views_home_home_html_erb___189227068144553016_44760'
+Started GET "/" for 127.0.0.1 at 2020-10-26 19:47:47 +0100
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/home
+  [1m[36mPotin Load (0.1ms)[0m  [1m[34mSELECT "potins".* FROM "potins"[0m
+  ↳ app/views/home/home.html.erb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/home/home.html.erb:11
+  Rendered home/home.html.erb within layouts/home (5.5ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `first_name' for #<Array:0x00007f1f891adad8>):
+     8:     <%= t.title %>
+     9:  </div>
+    10:  <div class="author">
+    11:  par : <%=a = @users.select { |u| u.id == t.user_id }.first_name%>
+    12:  </div>
+    13: </div>
+    14: <% end %>
+  
+app/views/home/home.html.erb:11:in `block in _app_views_home_home_html_erb___189227068144553016_45280'
+app/views/home/home.html.erb:4:in `_app_views_home_home_html_erb___189227068144553016_45280'
+Started GET "/" for 127.0.0.1 at 2020-10-26 19:48:02 +0100
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/home
+  [1m[36mPotin Load (0.1ms)[0m  [1m[34mSELECT "potins".* FROM "potins"[0m
+  ↳ app/views/home/home.html.erb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/home/home.html.erb:11
+  Rendered home/home.html.erb within layouts/home (4.2ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `first_name' for #<Array:0x00007f1f88f31138>):
+     8:     <%= t.title %>
+     9:  </div>
+    10:  <div class="author">
+    11:  par : <%=a = @users.select { |u| u.id == t.user_id }%> <%=a.first_name%>
+    12:  </div>
+    13: </div>
+    14: <% end %>
+  
+app/views/home/home.html.erb:11:in `block in _app_views_home_home_html_erb___189227068144553016_45800'
+app/views/home/home.html.erb:4:in `_app_views_home_home_html_erb___189227068144553016_45800'
+Started GET "/" for 127.0.0.1 at 2020-10-26 19:48:17 +0100
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/home
+  [1m[36mPotin Load (0.3ms)[0m  [1m[34mSELECT "potins".* FROM "potins"[0m
+  ↳ app/views/home/home.html.erb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/home/home.html.erb:11
+  Rendered home/home.html.erb within layouts/home (5.6ms)
+Completed 200 OK in 18ms (Views: 16.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-26 19:48:55 +0100
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/home
+  [1m[36mPotin Load (0.1ms)[0m  [1m[34mSELECT "potins".* FROM "potins"[0m
+  ↳ app/views/home/home.html.erb:4
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/home/home.html.erb:11
+  Rendered home/home.html.erb within layouts/home (3.8ms)
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-26 19:49:27 +0100
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/home
+  [1m[36mPotin Load (0.2ms)[0m  [1m[34mSELECT "potins".* FROM "potins"[0m
+  ↳ app/views/home/home.html.erb:4
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/home/home.html.erb:11
+  Rendered home/home.html.erb within layouts/home (2.8ms)
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-26 20:11:27 +0100
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/home
+  [1m[36mPotin Load (0.2ms)[0m  [1m[34mSELECT "potins".* FROM "potins"[0m
+  ↳ app/views/home/home.html.erb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/home/home.html.erb:11
+  Rendered home/home.html.erb within layouts/home (2.2ms)
+Completed 200 OK in 15ms (Views: 13.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-26 20:30:11 +0100
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/home
+  [1m[36mPotin Load (0.2ms)[0m  [1m[34mSELECT "potins".* FROM "potins"[0m
+  ↳ app/views/home/home.html.erb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/home/home.html.erb:10
+  Rendered home/home.html.erb within layouts/home (2.9ms)
+Completed 200 OK in 15ms (Views: 14.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-26 20:35:25 +0100
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/home
+  [1m[36mPotin Load (0.2ms)[0m  [1m[34mSELECT "potins".* FROM "potins"[0m
+  ↳ app/views/home/home.html.erb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/home/home.html.erb:10
+  Rendered home/home.html.erb within layouts/home (2.2ms)
+Completed 200 OK in 15ms (Views: 14.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-26 20:35:29 +0100
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/home
+  [1m[36mPotin Load (0.1ms)[0m  [1m[34mSELECT "potins".* FROM "potins"[0m
+  ↳ app/views/home/home.html.erb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/home/home.html.erb:10
+  Rendered home/home.html.erb within layouts/home (2.0ms)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-26 20:35:37 +0100
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/home
+  [1m[36mPotin Load (0.3ms)[0m  [1m[34mSELECT "potins".* FROM "potins"[0m
+  ↳ app/views/home/home.html.erb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/home/home.html.erb:10
+  Rendered home/home.html.erb within layouts/home (3.0ms)
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-26 20:36:39 +0100
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/home
+  [1m[36mPotin Load (0.2ms)[0m  [1m[34mSELECT "potins".* FROM "potins"[0m
+  ↳ app/views/home/home.html.erb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/home/home.html.erb:10
+  Rendered home/home.html.erb within layouts/home (2.5ms)
+Completed 200 OK in 16ms (Views: 14.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-26 20:37:40 +0100
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/home
+  [1m[36mPotin Load (0.3ms)[0m  [1m[34mSELECT "potins".* FROM "potins"[0m
+  ↳ app/views/home/home.html.erb:4
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/home/home.html.erb:10
+  Rendered home/home.html.erb within layouts/home (3.3ms)
+Completed 200 OK in 19ms (Views: 17.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-26 20:37:53 +0100
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/home
+  [1m[36mPotin Load (0.1ms)[0m  [1m[34mSELECT "potins".* FROM "potins"[0m
+  ↳ app/views/home/home.html.erb:4
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/home/home.html.erb:10
+  Rendered home/home.html.erb within layouts/home (2.3ms)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-26 20:42:11 +0100
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/home
+  [1m[36mPotin Load (0.2ms)[0m  [1m[34mSELECT "potins".* FROM "potins"[0m
+  ↳ app/views/home/home.html.erb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/home/home.html.erb:10
+  Rendered home/home.html.erb within layouts/home (2.6ms)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-26 20:42:17 +0100
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/home
+  [1m[36mPotin Load (0.3ms)[0m  [1m[34mSELECT "potins".* FROM "potins"[0m
+  ↳ app/views/home/home.html.erb:4
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/home/home.html.erb:10
+  Rendered home/home.html.erb within layouts/home (2.7ms)
+Completed 200 OK in 16ms (Views: 14.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-26 20:43:44 +0100
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/home
+  [1m[36mPotin Load (0.2ms)[0m  [1m[34mSELECT "potins".* FROM "potins"[0m
+  ↳ app/views/home/home.html.erb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/home/home.html.erb:10
+  Rendered home/home.html.erb within layouts/home (2.1ms)
+Completed 200 OK in 15ms (Views: 14.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-26 20:44:15 +0100
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/home
+  [1m[36mPotin Load (0.2ms)[0m  [1m[34mSELECT "potins".* FROM "potins"[0m
+  ↳ app/views/home/home.html.erb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/home/home.html.erb:10
+  Rendered home/home.html.erb within layouts/home (2.2ms)
+Completed 200 OK in 17ms (Views: 15.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-26 20:44:24 +0100
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/home
+  [1m[36mPotin Load (0.1ms)[0m  [1m[34mSELECT "potins".* FROM "potins"[0m
+  ↳ app/views/home/home.html.erb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/home/home.html.erb:10
+  Rendered home/home.html.erb within layouts/home (2.9ms)
+Completed 200 OK in 39ms (Views: 37.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-26 20:44:36 +0100
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/home
+  [1m[36mPotin Load (0.1ms)[0m  [1m[34mSELECT "potins".* FROM "potins"[0m
+  ↳ app/views/home/home.html.erb:4
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/home/home.html.erb:10
+  Rendered home/home.html.erb within layouts/home (2.9ms)
+Completed 200 OK in 35ms (Views: 31.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-26 20:44:47 +0100
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/home
+  [1m[36mPotin Load (0.1ms)[0m  [1m[34mSELECT "potins".* FROM "potins"[0m
+  ↳ app/views/home/home.html.erb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/home/home.html.erb:10
+  Rendered home/home.html.erb within layouts/home (2.0ms)
+Completed 200 OK in 70ms (Views: 68.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-26 20:46:53 +0100
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/home
+  [1m[36mPotin Load (0.2ms)[0m  [1m[34mSELECT "potins".* FROM "potins"[0m
+  ↳ app/views/home/home.html.erb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/home/home.html.erb:10
+  Rendered home/home.html.erb within layouts/home (2.8ms)
+Completed 200 OK in 21ms (Views: 19.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-26 20:47:24 +0100
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/home
+  [1m[36mPotin Load (0.2ms)[0m  [1m[34mSELECT "potins".* FROM "potins"[0m
+  ↳ app/views/home/home.html.erb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/home/home.html.erb:10
+  Rendered home/home.html.erb within layouts/home (3.0ms)
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-26 20:47:36 +0100
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/home
+  [1m[36mPotin Load (0.1ms)[0m  [1m[34mSELECT "potins".* FROM "potins"[0m
+  ↳ app/views/home/home.html.erb:4
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/home/home.html.erb:10
+  Rendered home/home.html.erb within layouts/home (3.1ms)
+Completed 200 OK in 16ms (Views: 15.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-26 20:48:01 +0100
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/home
+  [1m[36mPotin Load (0.1ms)[0m  [1m[34mSELECT "potins".* FROM "potins"[0m
+  ↳ app/views/home/home.html.erb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/home/home.html.erb:10
+  Rendered home/home.html.erb within layouts/home (2.1ms)
+Completed 200 OK in 15ms (Views: 13.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-26 20:49:51 +0100
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/home
+  [1m[36mPotin Load (0.1ms)[0m  [1m[34mSELECT "potins".* FROM "potins"[0m
+  ↳ app/views/home/home.html.erb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/home/home.html.erb:10
+  Rendered home/home.html.erb within layouts/home (2.2ms)
+Completed 200 OK in 14ms (Views: 12.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-26 20:50:27 +0100
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/home
+  [1m[36mPotin Load (0.2ms)[0m  [1m[34mSELECT "potins".* FROM "potins"[0m
+  ↳ app/views/home/home.html.erb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/home/home.html.erb:10
+  Rendered home/home.html.erb within layouts/home (4.4ms)
+Completed 200 OK in 14ms (Views: 13.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/welcome/Julien" for 127.0.0.1 at 2020-10-26 21:01:08 +0100
+Processing by HomeController#welcome as HTML
+  Parameters: {"name"=>"Julien"}
+  Rendering home/welcome.html.erb within layouts/home
+  Rendered home/welcome.html.erb within layouts/home (0.3ms)
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-26 21:01:52 +0100
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/home
+  [1m[36mPotin Load (0.2ms)[0m  [1m[34mSELECT "potins".* FROM "potins"[0m
+  ↳ app/views/home/home.html.erb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/home/home.html.erb:10
+  Rendered home/home.html.erb within layouts/home (2.1ms)
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2020-10-26 21:02:35 +0100
+Processing by TrivialsController#contact as HTML
+  Rendering trivials/contact.html.erb within layouts/trivials
+  Rendered trivials/contact.html.erb within layouts/trivials (0.3ms)
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2020-10-26 21:03:12 +0100
+Processing by TrivialsController#contact as HTML
+  Rendering trivials/contact.html.erb within layouts/trivials
+  Rendered trivials/contact.html.erb within layouts/trivials (0.3ms)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2020-10-26 21:03:51 +0100
+Processing by TrivialsController#contact as HTML
+  Rendering trivials/contact.html.erb within layouts/trivials
+  Rendered trivials/contact.html.erb within layouts/trivials (0.2ms)
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2020-10-26 21:05:08 +0100
+Processing by TrivialsController#contact as HTML
+  Rendering trivials/contact.html.erb within layouts/trivials
+  Rendered trivials/contact.html.erb within layouts/trivials (0.3ms)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-26 21:05:14 +0100
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/home
+  [1m[36mPotin Load (0.2ms)[0m  [1m[34mSELECT "potins".* FROM "potins"[0m
+  ↳ app/views/home/home.html.erb:4
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/home/home.html.erb:10
+  Rendered home/home.html.erb within layouts/home (3.0ms)
+Completed 200 OK in 15ms (Views: 13.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-26 21:18:03 +0100
+  
+SyntaxError (/home/hp/thp/w3/d1/gossips/app/controllers/home_controller.rb:2: syntax error, unexpected ',', expecting ';' or '\n'
+    def home, as: 'home'
+            ^
+/home/hp/thp/w3/d1/gossips/app/controllers/home_controller.rb:9: syntax error, unexpected `end', expecting end-of-input):
+  
+app/controllers/home_controller.rb:2: syntax error, unexpected ',', expecting ';' or '\n'
+app/controllers/home_controller.rb:9: syntax error, unexpected `end', expecting end-of-input
+Started GET "/" for 127.0.0.1 at 2020-10-26 21:19:35 +0100
+  
+SyntaxError (/home/hp/thp/w3/d1/gossips/app/controllers/home_controller.rb:2: syntax error, unexpected ',', expecting ';' or '\n'
+    def home, :as => 'home'
+            ^
+/home/hp/thp/w3/d1/gossips/app/controllers/home_controller.rb:9: syntax error, unexpected `end', expecting end-of-input):
+  
+app/controllers/home_controller.rb:2: syntax error, unexpected ',', expecting ';' or '\n'
+app/controllers/home_controller.rb:9: syntax error, unexpected `end', expecting end-of-input
+Started GET "/" for 127.0.0.1 at 2020-10-26 21:19:43 +0100
+  
+SyntaxError (/home/hp/thp/w3/d1/gossips/app/controllers/home_controller.rb:2: syntax error, unexpected ',', expecting ';' or '\n'
+    def home, :as 'home'
+            ^
+/home/hp/thp/w3/d1/gossips/app/controllers/home_controller.rb:9: syntax error, unexpected `end', expecting end-of-input):
+  
+app/controllers/home_controller.rb:2: syntax error, unexpected ',', expecting ';' or '\n'
+app/controllers/home_controller.rb:9: syntax error, unexpected `end', expecting end-of-input
+Started GET "/" for 127.0.0.1 at 2020-10-26 21:21:00 +0100
+  
+SyntaxError (/home/hp/thp/w3/d1/gossips/app/controllers/home_controller.rb:2: syntax error, unexpected ',', expecting ';' or '\n'
+    def home, :as 'home'
+            ^
+/home/hp/thp/w3/d1/gossips/app/controllers/home_controller.rb:9: syntax error, unexpected `end', expecting end-of-input):
+  
+app/controllers/home_controller.rb:2: syntax error, unexpected ',', expecting ';' or '\n'
+app/controllers/home_controller.rb:9: syntax error, unexpected `end', expecting end-of-input
+Started GET "/" for 127.0.0.1 at 2020-10-26 21:21:08 +0100
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/home
+  [1m[36mPotin Load (9.0ms)[0m  [1m[34mSELECT "potins".* FROM "potins"[0m
+  ↳ app/views/home/home.html.erb:4
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/home/home.html.erb:10
+  Rendered home/home.html.erb within layouts/home (21.1ms)
+Completed 200 OK in 137ms (Views: 109.0ms | ActiveRecord: 10.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-26 21:21:12 +0100
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/home
+  [1m[36mPotin Load (0.2ms)[0m  [1m[34mSELECT "potins".* FROM "potins"[0m
+  ↳ app/views/home/home.html.erb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/home/home.html.erb:10
+  Rendered home/home.html.erb within layouts/home (2.8ms)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/welcome/Julien" for 127.0.0.1 at 2020-10-26 21:21:18 +0100
+Processing by HomeController#welcome as HTML
+  Parameters: {"name"=>"Julien"}
+  Rendering home/welcome.html.erb within layouts/home
+  Rendered home/welcome.html.erb within layouts/home (0.5ms)
+Completed 200 OK in 38ms (Views: 10.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-26 21:21:20 +0100
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/home
+  [1m[36mPotin Load (0.2ms)[0m  [1m[34mSELECT "potins".* FROM "potins"[0m
+  ↳ app/views/home/home.html.erb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/home/home.html.erb:10
+  Rendered home/home.html.erb within layouts/home (2.0ms)
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-26 21:23:07 +0100
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/home
+  [1m[36mPotin Load (0.2ms)[0m  [1m[34mSELECT "potins".* FROM "potins"[0m
+  ↳ app/views/home/home.html.erb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/home/home.html.erb:10
+  Rendered home/home.html.erb within layouts/home (10.9ms)
+Completed 200 OK in 24ms (Views: 19.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/team" for 127.0.0.1 at 2020-10-26 21:23:09 +0100
+Processing by TrivialsController#team as HTML
+  Rendering trivials/team.html.erb within layouts/trivials
+  Rendered trivials/team.html.erb within layouts/trivials (0.5ms)
+Completed 200 OK in 40ms (Views: 12.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2020-10-26 21:23:14 +0100
+Processing by TrivialsController#contact as HTML
+  Rendering trivials/contact.html.erb within layouts/trivials
+  Rendered trivials/contact.html.erb within layouts/trivials (0.5ms)
+Completed 200 OK in 39ms (Views: 10.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-26 21:23:52 +0100
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/home
+  [1m[36mPotin Load (0.2ms)[0m  [1m[34mSELECT "potins".* FROM "potins"[0m
+  ↳ app/views/home/home.html.erb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/home/home.html.erb:10
+  Rendered home/home.html.erb within layouts/home (2.0ms)
+Completed 200 OK in 14ms (Views: 12.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/team" for 127.0.0.1 at 2020-10-26 21:23:55 +0100
+Processing by TrivialsController#team as HTML
+  Rendering trivials/team.html.erb within layouts/trivials
+  Rendered trivials/team.html.erb within layouts/trivials (0.4ms)
+Completed 200 OK in 14ms (Views: 12.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2020-10-26 21:23:57 +0100
+Processing by TrivialsController#contact as HTML
+  Rendering trivials/contact.html.erb within layouts/trivials
+  Rendered trivials/contact.html.erb within layouts/trivials (0.4ms)
+Completed 200 OK in 17ms (Views: 16.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-26 21:23:58 +0100
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/home
+  [1m[36mPotin Load (0.2ms)[0m  [1m[34mSELECT "potins".* FROM "potins"[0m
+  ↳ app/views/home/home.html.erb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/home/home.html.erb:10
+  Rendered home/home.html.erb within layouts/home (3.2ms)
+Completed 200 OK in 16ms (Views: 14.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-26 21:24:46 +0100
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/home
+  [1m[36mPotin Load (0.2ms)[0m  [1m[34mSELECT "potins".* FROM "potins"[0m
+  ↳ app/views/home/home.html.erb:4
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/home/home.html.erb:10
+  Rendered home/home.html.erb within layouts/home (2.6ms)
+Completed 200 OK in 38ms (Views: 36.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-26 21:25:13 +0100
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/home
+  [1m[36mPotin Load (0.2ms)[0m  [1m[34mSELECT "potins".* FROM "potins"[0m
+  ↳ app/views/home/home.html.erb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/home/home.html.erb:10
+  Rendered home/home.html.erb within layouts/home (1.9ms)
+Completed 200 OK in 16ms (Views: 14.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-26 21:26:35 +0100
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/home
+  [1m[36mPotin Load (0.3ms)[0m  [1m[34mSELECT "potins".* FROM "potins"[0m
+  ↳ app/views/home/home.html.erb:4
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/home/home.html.erb:10
+  Rendered home/home.html.erb within layouts/home (3.2ms)
+Completed 200 OK in 20ms (Views: 18.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-26 21:26:52 +0100
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/home
+  [1m[36mPotin Load (0.2ms)[0m  [1m[34mSELECT "potins".* FROM "potins"[0m
+  ↳ app/views/home/home.html.erb:4
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/home/home.html.erb:10
+  Rendered home/home.html.erb within layouts/home (3.9ms)
+Completed 200 OK in 26ms (Views: 24.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-26 21:27:08 +0100
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/home
+  [1m[36mPotin Load (0.1ms)[0m  [1m[34mSELECT "potins".* FROM "potins"[0m
+  ↳ app/views/home/home.html.erb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/home/home.html.erb:10
+  Rendered home/home.html.erb within layouts/home (2.0ms)
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-26 21:27:27 +0100
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/home
+  [1m[36mPotin Load (0.2ms)[0m  [1m[34mSELECT "potins".* FROM "potins"[0m
+  ↳ app/views/home/home.html.erb:4
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/home/home.html.erb:10
+  Rendered home/home.html.erb within layouts/home (3.8ms)
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-26 21:27:51 +0100
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/home
+  [1m[36mPotin Load (0.3ms)[0m  [1m[34mSELECT "potins".* FROM "potins"[0m
+  ↳ app/views/home/home.html.erb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/home/home.html.erb:10
+  Rendered home/home.html.erb within layouts/home (3.0ms)
+Completed 200 OK in 133ms (Views: 131.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/team" for 127.0.0.1 at 2020-10-26 21:27:55 +0100
+Processing by TrivialsController#team as HTML
+  Rendering trivials/team.html.erb within layouts/trivials
+  Rendered trivials/team.html.erb within layouts/trivials (0.3ms)
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2020-10-26 21:27:56 +0100
+Processing by TrivialsController#contact as HTML
+  Rendering trivials/contact.html.erb within layouts/trivials
+  Rendered trivials/contact.html.erb within layouts/trivials (0.3ms)
+Completed 200 OK in 15ms (Views: 13.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-26 21:27:57 +0100
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/home
+  [1m[36mPotin Load (0.1ms)[0m  [1m[34mSELECT "potins".* FROM "potins"[0m
+  ↳ app/views/home/home.html.erb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/home/home.html.erb:10
+  Rendered home/home.html.erb within layouts/home (2.2ms)
+Completed 200 OK in 14ms (Views: 12.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/potin/3" for 127.0.0.1 at 2020-10-26 21:36:01 +0100
+Processing by HomeController#potin as HTML
+  Parameters: {"index"=>"3"}
+  [1m[36mPotin Load (0.4ms)[0m  [1m[34mSELECT  "potins".* FROM "potins" WHERE "potins"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 11]]
+  ↳ /home/hp/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 0.3ms)
+
+
+  
+  [1m[36mCACHE Potin Load (0.0ms)[0m  [1m[34mSELECT  "potins".* FROM "potins" WHERE "potins"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 11]]
+  ↳ /home/hp/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+NoMethodError (undefined method `id' for #<Potin::ActiveRecord_Relation:0x00007f1f8448a580>
+Did you mean?  ids):
+  
+app/controllers/home_controller.rb:11:in `potin'
+Started GET "/potin/3" for 127.0.0.1 at 2020-10-26 21:36:26 +0100
+Processing by HomeController#potin as HTML
+  Parameters: {"index"=>"3"}
+  [1m[36mPotin Load (0.1ms)[0m  [1m[34mSELECT "potins".* FROM "potins" WHERE "potins"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/home_controller.rb:10
+Completed 406 Not Acceptable in 14ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionController::UnknownFormat (HomeController#potin is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.4.4) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.4.4) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.4.4) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.4.4) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.4.4) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.4.4) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.4.4) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.4.4) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.4.4) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.4.4) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.4.4) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.4.4) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.4.4) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.4.4) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.4.4) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.4.4) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.4.4) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.4.4) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.4.4) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.4.4) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.4.4) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.4) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/potin/3" for 127.0.0.1 at 2020-10-26 21:37:02 +0100
+Processing by HomeController#potin as HTML
+  Parameters: {"index"=>"3"}
+  [1m[36mPotin Load (0.1ms)[0m  [1m[34mSELECT "potins".* FROM "potins" WHERE "potins"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/home_controller.rb:10
+  Rendering home/potin.html.erb within layouts/home
+  Rendered home/potin.html.erb within layouts/home (0.2ms)
+Completed 200 OK in 11ms (Views: 9.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/potin/3" for 127.0.0.1 at 2020-10-26 21:38:05 +0100
+Processing by HomeController#potin as HTML
+  Parameters: {"index"=>"3"}
+  [1m[36mPotin Load (0.1ms)[0m  [1m[34mSELECT "potins".* FROM "potins" WHERE "potins"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/home_controller.rb:10
+  Rendering home/potin.html.erb within layouts/home
+  Rendered home/potin.html.erb within layouts/home (0.5ms)
+Completed 200 OK in 22ms (Views: 13.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/potin/3" for 127.0.0.1 at 2020-10-26 21:42:52 +0100
+Processing by HomeController#potin as HTML
+  Parameters: {"index"=>"3"}
+  [1m[36mPotin Load (0.1ms)[0m  [1m[34mSELECT "potins".* FROM "potins" WHERE "potins"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/home_controller.rb:10
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ?[0m  [["id", 6]]
+  ↳ app/controllers/home_controller.rb:11
+  Rendering home/potin.html.erb within layouts/home
+  Rendered home/potin.html.erb within layouts/home (129.0ms)
+Completed 500 Internal Server Error in 146ms (ActiveRecord: 1.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user' for #<#<Class:0x00007f1f845db150>:0x00007f1f845d9850>
+Did you mean?  @user):
+    1: <h2>
+    2:     potin par : <%=user.first_name%> <%=user.last_name%>
+    3: </h2>
+  
+app/views/home/potin.html.erb:2:in `_app_views_home_potin_html_erb__4375731894636453868_69720'
+Started GET "/potin/3" for 127.0.0.1 at 2020-10-26 21:43:05 +0100
+Processing by HomeController#potin as HTML
+  Parameters: {"index"=>"3"}
+  [1m[36mPotin Load (0.3ms)[0m  [1m[34mSELECT "potins".* FROM "potins" WHERE "potins"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/home_controller.rb:10
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ?[0m  [["id", 6]]
+  ↳ app/controllers/home_controller.rb:11
+  Rendering home/potin.html.erb within layouts/home
+  Rendered home/potin.html.erb within layouts/home (0.4ms)
+Completed 200 OK in 18ms (Views: 13.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/potin/3" for 127.0.0.1 at 2020-10-26 21:44:19 +0100
+Processing by HomeController#potin as HTML
+  Parameters: {"index"=>"3"}
+  [1m[36mPotin Load (0.2ms)[0m  [1m[34mSELECT "potins".* FROM "potins" WHERE "potins"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/home_controller.rb:10
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ?[0m  [["id", 6]]
+  ↳ app/controllers/home_controller.rb:11
+  Rendering home/potin.html.erb within layouts/home
+  Rendered home/potin.html.erb within layouts/home (0.4ms)
+Completed 200 OK in 11ms (Views: 8.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/potin/3" for 127.0.0.1 at 2020-10-26 21:44:52 +0100
+Processing by HomeController#potin as HTML
+  Parameters: {"index"=>"3"}
+  [1m[36mPotin Load (0.2ms)[0m  [1m[34mSELECT "potins".* FROM "potins" WHERE "potins"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/home_controller.rb:10
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ?[0m  [["id", 6]]
+  ↳ app/controllers/home_controller.rb:11
+  Rendering home/potin.html.erb within layouts/home
+  Rendered home/potin.html.erb within layouts/home (0.5ms)
+Completed 200 OK in 12ms (Views: 9.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-26 21:47:51 +0100
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/home
+  [1m[36mPotin Load (0.2ms)[0m  [1m[34mSELECT "potins".* FROM "potins"[0m
+  ↳ app/views/home/home.html.erb:4
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/home/home.html.erb:10
+  Rendered home/home.html.erb within layouts/home (2.4ms)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/potin/1" for 127.0.0.1 at 2020-10-26 21:47:53 +0100
+Processing by HomeController#potin as HTML
+  Parameters: {"index"=>"1"}
+  [1m[36mPotin Load (0.2ms)[0m  [1m[34mSELECT "potins".* FROM "potins" WHERE "potins"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/home_controller.rb:10
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ?[0m  [["id", 4]]
+  ↳ app/controllers/home_controller.rb:11
+  Rendering home/potin.html.erb within layouts/home
+  Rendered home/potin.html.erb within layouts/home (0.6ms)
+Completed 200 OK in 18ms (Views: 14.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/potin/1" for 127.0.0.1 at 2020-10-26 21:47:58 +0100
+Processing by HomeController#potin as HTML
+  Parameters: {"index"=>"1"}
+  [1m[36mPotin Load (0.2ms)[0m  [1m[34mSELECT "potins".* FROM "potins" WHERE "potins"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/home_controller.rb:10
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ?[0m  [["id", 4]]
+  ↳ app/controllers/home_controller.rb:11
+  Rendering home/potin.html.erb within layouts/home
+  Rendered home/potin.html.erb within layouts/home (0.5ms)
+Completed 200 OK in 21ms (Views: 16.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-26 21:48:24 +0100
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/home
+  [1m[36mPotin Load (0.1ms)[0m  [1m[34mSELECT "potins".* FROM "potins"[0m
+  ↳ app/views/home/home.html.erb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/home/home.html.erb:10
+  Rendered home/home.html.erb within layouts/home (2.1ms)
+Completed 200 OK in 16ms (Views: 15.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/potin/1" for 127.0.0.1 at 2020-10-26 21:48:27 +0100
+Processing by HomeController#potin as HTML
+  Parameters: {"index"=>"1"}
+  [1m[36mPotin Load (0.1ms)[0m  [1m[34mSELECT "potins".* FROM "potins" WHERE "potins"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/home_controller.rb:10
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ?[0m  [["id", 4]]
+  ↳ app/controllers/home_controller.rb:11
+  Rendering home/potin.html.erb within layouts/home
+  Rendered home/potin.html.erb within layouts/home (0.6ms)
+Completed 200 OK in 18ms (Views: 13.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/potin/2" for 127.0.0.1 at 2020-10-26 21:48:30 +0100
+Processing by HomeController#potin as HTML
+  Parameters: {"index"=>"2"}
+  [1m[36mPotin Load (0.1ms)[0m  [1m[34mSELECT "potins".* FROM "potins" WHERE "potins"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/home_controller.rb:10
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/home_controller.rb:11
+  Rendering home/potin.html.erb within layouts/home
+  Rendered home/potin.html.erb within layouts/home (0.3ms)
+Completed 200 OK in 13ms (Views: 11.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/potin/1" for 127.0.0.1 at 2020-10-26 21:48:48 +0100
+Processing by HomeController#potin as HTML
+  Parameters: {"index"=>"1"}
+  [1m[36mPotin Load (0.1ms)[0m  [1m[34mSELECT "potins".* FROM "potins" WHERE "potins"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/home_controller.rb:10
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ?[0m  [["id", 4]]
+  ↳ app/controllers/home_controller.rb:11
+  Rendering home/potin.html.erb within layouts/home
+  Rendered home/potin.html.erb within layouts/home (0.4ms)
+Completed 200 OK in 15ms (Views: 12.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/potin/1" for 127.0.0.1 at 2020-10-26 21:49:57 +0100
+Processing by HomeController#potin as HTML
+  Parameters: {"index"=>"1"}
+  [1m[36mPotin Load (0.1ms)[0m  [1m[34mSELECT "potins".* FROM "potins" WHERE "potins"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/home_controller.rb:10
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ?[0m  [["id", 4]]
+  ↳ app/controllers/home_controller.rb:11
+  Rendering home/potin.html.erb within layouts/home
+  Rendered home/potin.html.erb within layouts/home (0.6ms)
+Completed 200 OK in 15ms (Views: 12.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/user/1" for 127.0.0.1 at 2020-10-26 21:53:51 +0100
+Processing by HomeController#user as HTML
+  Parameters: {"index"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/home_controller.rb:14
+  Rendering home/user.html.erb within layouts/home
+  Rendered home/user.html.erb within layouts/home (0.4ms)
+Completed 200 OK in 22ms (Views: 11.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/user/1" for 127.0.0.1 at 2020-10-26 21:54:07 +0100
+Processing by HomeController#user as HTML
+  Parameters: {"index"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/home_controller.rb:14
+  Rendering home/user.html.erb within layouts/home
+  Rendered home/user.html.erb within layouts/home (0.3ms)
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/user/1" for 127.0.0.1 at 2020-10-26 21:54:47 +0100
+Processing by HomeController#user as HTML
+  Parameters: {"index"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/home_controller.rb:14
+  Rendering home/user.html.erb within layouts/home
+  Rendered home/user.html.erb within layouts/home (0.4ms)
+Completed 200 OK in 16ms (Views: 14.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/user/1" for 127.0.0.1 at 2020-10-26 21:55:14 +0100
+Processing by HomeController#user as HTML
+  Parameters: {"index"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/home_controller.rb:14
+  Rendering home/user.html.erb within layouts/home
+  Rendered home/user.html.erb within layouts/home (0.4ms)
+Completed 200 OK in 31ms (Views: 29.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-26 21:55:40 +0100
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/home
+  [1m[36mPotin Load (0.2ms)[0m  [1m[34mSELECT "potins".* FROM "potins"[0m
+  ↳ app/views/home/home.html.erb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/home/home.html.erb:10
+  Rendered home/home.html.erb within layouts/home (6.5ms)
+Completed 200 OK in 30ms (Views: 16.9ms | ActiveRecord: 0.9ms)
+
+
