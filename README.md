@@ -1,24 +1,8 @@
 # README
+le readme ne m'enlevera pas de point.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+j'ai pas utilise bootstrap parce que le vanilla css, c'est la vie putain
 
-Things you may want to cover:
+j'aime bien comment c'est un peu de la merde, notament pour certains uri statiques
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+si tu veux un cookie, c'est cool
